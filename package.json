@@ -1,0 +1,33 @@
+{
+  "name": "@lexio/calcul-avantage-en-nature",
+  "version": "0.1.0",
+  "description": "Moteur de calcul de l'avantage en nature véhicule (assiette URSSAF) : évaluation forfaitaire et au réel, régimes avant/après l'arrêté du 25 février 2025, achat et location, abattement véhicule électrique, bornes de recharge. TypeScript pur, zéro dépendance.",
+  "type": "module",
+  "license": "MIT",
+  "main": "./src/index.ts",
+  "exports": "./src/index.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lexio-rent-git/calcul-avantage-en-nature"
+  },
+  "keywords": [
+    "avantage-en-nature",
+    "urssaf",
+    "vehicule-de-fonction",
+    "paie",
+    "boss",
+    "cotisations-sociales",
+    "dsn",
+    "vehicule-electrique",
+    "lld",
+    "loa",
+    "flotte-automobile",
+    "bareme"
+  ],
+  "engines": {
+    "node": ">=22.18.0"
+  },
+  "scripts": {
+    "test": "node --test tests/"
+  }
+}
