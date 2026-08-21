@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "Si vous citez cet outil, merci d'utiliser les métadonnées ci-dessous."
+title: "Calcul de l'avantage en nature véhicule"
+authors:
+  - name: "Lexio"
+    website: "https://lexio.rent"
+repository-code: "https://github.com/lexio-rent-git/calcul-avantage-en-nature"
+url: "https://lexio.rent/outils"
+license: MIT
+version: 0.1.0
+date-released: "2026-08-21"

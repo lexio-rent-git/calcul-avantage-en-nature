@@ -1,5 +1,7 @@
 # Calcul de l'avantage en nature véhicule
 
+![Licence](https://img.shields.io/badge/licence-MIT-green) ![Node](https://img.shields.io/badge/node-%E2%89%A5%2024-brightgreen) ![Tests](https://img.shields.io/badge/tests-7%20%E2%9C%94-success) ![Dépendances](https://img.shields.io/badge/d%C3%A9pendances-0-blue) [![Essayer en ligne](https://img.shields.io/badge/essayer_en_ligne-lexio.rent-e8590c)](https://lexio.rent/outils/simulateur-avantage-en-nature-vehicule)
+
 Développé et maintenu par [Lexio](https://lexio.rent), le logiciel de location de voiture et d'utilitaire pour loueurs professionnels.
 
 Moteur de calcul TypeScript **pur et sans dépendance** de l'avantage en nature « véhicule » : l'évaluation de l'usage privé d'un véhicule mis à disposition d'un salarié, pour l'assiette des cotisations de sécurité sociale (URSSAF / DSN).
