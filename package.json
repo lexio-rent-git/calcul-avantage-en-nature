@@ -6,6 +6,9 @@
   "license": "MIT",
   "main": "./src/index.ts",
   "exports": "./src/index.ts",
+  "bin": {
+    "aen": "./src/cli.ts"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/lexio-rent-git/calcul-avantage-en-nature"
@@ -28,6 +31,7 @@
     "node": ">=22.18.0"
   },
   "scripts": {
-    "test": "node --test tests/"
+    "test": "node --test tests/",
+    "aen": "node src/cli.ts"
   }
 }

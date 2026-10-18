@@ -1,6 +1,6 @@
 # Calcul de l'avantage en nature véhicule
 
-![Licence](https://img.shields.io/badge/licence-MIT-green) ![Node](https://img.shields.io/badge/node-%E2%89%A5%2024-brightgreen) ![Tests](https://img.shields.io/badge/tests-7%20%E2%9C%94-success) ![Dépendances](https://img.shields.io/badge/d%C3%A9pendances-0-blue) [![Essayer en ligne](https://img.shields.io/badge/essayer_en_ligne-lexio.rent-e8590c)](https://lexio.rent/outils/simulateur-avantage-en-nature-vehicule)
+![Licence](https://img.shields.io/badge/licence-MIT-green) ![Node](https://img.shields.io/badge/node-%E2%89%A5%2024-brightgreen) ![Tests](https://img.shields.io/badge/tests-14%20%E2%9C%94-success) ![Dépendances](https://img.shields.io/badge/d%C3%A9pendances-0-blue) [![Essayer en ligne](https://img.shields.io/badge/essayer_en_ligne-lexio.rent-e8590c)](https://lexio.rent/outils/simulateur-avantage-en-nature-vehicule)
 
 Développé et maintenu par [Lexio](https://lexio.rent), le logiciel de location de voiture et d'utilitaire pour loueurs professionnels.
 
@@ -105,6 +105,27 @@ evaluerReel(evReel, 2026, "depuis-2025-02-01").annuel;
 ```
 
 Toutes les fonctions sont **pures** : mêmes entrées, mêmes sorties, aucun accès au DOM ni à un stockage. Chaque `Evaluation` retournée porte sa trace de calcul (`trace`), rejouables telles quelles sur un document de contrôle.
+
+## En ligne de commande et avec Docker
+
+Le dépôt fournit aussi un exécutable `aen` (`src/cli.ts`), sans dépendance :
+
+```bash
+node src/cli.ts calcul --annee 2026 --mode achat --prix 25000 --attribution 2026-01-01
+# forfait (sans-carburant) : 3 750 € sur la période, soit 313 € par mois
+# (sous le régime avant-2025-02-01 : 2 250 €)
+
+node src/cli.ts parc flotte.json      # parc complet décrit en JSON
+node src/cli.ts verifier              # rejoue les barèmes et les cas de contrôle
+node src/cli.ts --help                # toutes les options
+```
+
+La même chose sans installer Node, avec l'image Docker [`lexiorent/calcul-avantage-en-nature`](https://hub.docker.com/r/lexiorent/calcul-avantage-en-nature) :
+
+```bash
+docker run --rm lexiorent/calcul-avantage-en-nature calcul --prix 25000 --attribution 2026-01-01
+docker run --rm -i lexiorent/calcul-avantage-en-nature parc - --json < flotte.json
+```
 
 ## API
 

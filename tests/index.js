@@ -6,3 +6,4 @@
 // Il charge donc explicitement la suite TypeScript, exécutée nativement par le
 // type stripping de Node (aucune compilation, aucune dépendance).
 import "./avantage-nature.test.ts";
+import "./cli.test.ts";
