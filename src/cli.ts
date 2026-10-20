@@ -30,6 +30,13 @@ import {
   type Vehicule,
 } from "./avantage-nature.ts";
 
+// Sortie coupée par le lecteur (`cli … | head`) : on s'arrête proprement au lieu
+// de lever une erreur EPIPE.
+process.stdout.on("error", (e: NodeJS.ErrnoException) => {
+  if (e.code === "EPIPE") process.exit(0);
+  throw e;
+});
+
 const VERSION_EN_LIGNE = "https://lexio.rent/outils/simulateur-avantage-en-nature-vehicule";
 
 const ids = (t: ReadonlyArray<{ id: string }>): string => t.map((x) => x.id).join(" | ");
